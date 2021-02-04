@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <!-- Load polyfills -->
+  <script
+    src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+    defer>
+  </script>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+   <script src="http://x3dom.org/download/1.7/x3dom.js"></script>
+    <script src="../d3-x3dom-axis.min.js"></script>
+   <link rel="stylesheet", href="http://x3dom.org/download/1.7/x3dom.css" type="text/css" inline>
+
+  <!-- Load components via WebComponents.waitFor -->
+  <script type="module">
+    window.WebComponents = window.WebComponents || {
+      waitFor(cb){ addEventListener('WebComponentsReady', cb) }
+    }
+    WebComponents.waitFor(async () => {
+      import('./demo-plot');
+    });
+  </script>
+
+  <!-- Change stuff here for your app -->
+  <meta name="description" content="plot-3d">
+  <meta name="theme-color" content="#ffffff">
+  <title>Plot 3D</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <demo-plot></demo-plot>
+</body>
