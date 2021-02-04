@@ -9,9 +9,7 @@ import { D3X3D } from '../d3x3d';
   // class DemoPlot  extends LitElement  {
   render(){
     return html`
-    <h3>plot-3d demo </h3>
-    <input id="surfacePlot" type="button" value="array test" @click="${this.surfacePlot}" />
-
+    <h3>d3x3d demo </h3>
     <div id="plot2">
       ${super.render()}
     </div>
